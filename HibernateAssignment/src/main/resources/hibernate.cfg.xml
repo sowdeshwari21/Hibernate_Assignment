@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC connection to MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+      <property name="hibernate.connection.url">
+jdbc:mysql://localhost:3306/hibAss?createDatabaseIfNotExist=true&amp;useSSL=false&amp;serverTimezone=UTC
+</property>
+      
+       
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Sowdesh@21</property>
+
+        <!-- Hibernate Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <mapping resource="Employee.hbm.xml"></mapping>
+    </session-factory>
+</hibernate-configuration>
